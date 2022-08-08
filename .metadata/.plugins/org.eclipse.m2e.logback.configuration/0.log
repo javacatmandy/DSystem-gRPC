@@ -8,3 +8,123 @@
 2022-08-08 22:23:36,170 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2022-08-08 22:23:36,182 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-08-08 22:23:36,183 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-08 22:26:43,935 [Worker-12: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: MgRPC:SmartMedical:0.0.1-SNAPSHOT @ D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\pom.xml.
+2022-08-08 22:26:44,607 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2022-08-08 22:26:47,066 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\86186\AppData\Local\Temp\protocjar583886751560539869\bin\protoc.exe
+2022-08-08 22:26:47,069 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\86186\AppData\Local\Temp\protocjar1230908132915180496\include
+2022-08-08 22:26:47,200 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2022-08-08 22:26:47,204 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2022-08-08 22:26:47,205 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2022-08-08 22:26:47,207 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2022-08-08 22:26:47,209 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2022-08-08 22:26:47,211 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2022-08-08 22:26:47,212 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2022-08-08 22:26:47,214 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2022-08-08 22:26:47,215 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2022-08-08 22:26:47,216 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2022-08-08 22:26:47,217 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2022-08-08 22:26:47,218 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2022-08-08 22:26:47,968 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2022-08-08 22:26:47,968 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\src\main\resources
+2022-08-08 22:26:47,969 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2022-08-08 22:26:47,970 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\86186\AppData\Local\Temp\protocjar1230908132915180496\include
+2022-08-08 22:26:47,970 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2022-08-08 22:26:47,970 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2022-08-08 22:26:47,970 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2022-08-08 22:26:47,970 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2022-08-08 22:26:48,001 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2022-08-08 22:26:48,002 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2022-08-08 22:26:48,175 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-08 22:26:48,177 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-08 22:26:48,205 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-08 22:26:48,207 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-08 22:26:49,746 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2022-08-08 22:26:53,935 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\86186\AppData\Local\Temp\protocjar7727712718280936780\bin\protoc.exe
+2022-08-08 22:26:53,937 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\86186\AppData\Local\Temp\protocjar5636877207194561405\include
+2022-08-08 22:26:54,020 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2022-08-08 22:26:54,023 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2022-08-08 22:26:54,025 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2022-08-08 22:26:54,026 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2022-08-08 22:26:54,047 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2022-08-08 22:26:54,048 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2022-08-08 22:26:54,050 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2022-08-08 22:26:54,052 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2022-08-08 22:26:54,053 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2022-08-08 22:26:54,055 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2022-08-08 22:26:54,058 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2022-08-08 22:26:54,059 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2022-08-08 22:26:54,750 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2022-08-08 22:26:54,750 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\src\main\resources
+2022-08-08 22:26:54,750 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2022-08-08 22:26:54,750 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\86186\AppData\Local\Temp\protocjar5636877207194561405\include
+2022-08-08 22:26:54,750 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2022-08-08 22:26:54,750 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2022-08-08 22:26:54,750 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2022-08-08 22:26:54,751 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2022-08-08 22:26:54,761 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2022-08-08 22:26:54,762 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2022-08-08 22:26:54,765 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-08 22:26:54,767 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-08 22:26:54,770 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-08 22:26:54,770 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-08 22:27:00,118 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2022-08-08 22:27:00,591 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: MgRPC:SmartMedical:0.0.1-SNAPSHOT @ D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\pom.xml.
+2022-08-08 22:27:00,964 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2022-08-08 22:27:01,351 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\86186\AppData\Local\Temp\protocjar2299199126080508682\bin\protoc.exe
+2022-08-08 22:27:01,353 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\86186\AppData\Local\Temp\protocjar11983287854429211697\include
+2022-08-08 22:27:01,414 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2022-08-08 22:27:01,417 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2022-08-08 22:27:01,418 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2022-08-08 22:27:01,420 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2022-08-08 22:27:01,422 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2022-08-08 22:27:01,423 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2022-08-08 22:27:01,424 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2022-08-08 22:27:01,426 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2022-08-08 22:27:01,426 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2022-08-08 22:27:01,427 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2022-08-08 22:27:01,428 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2022-08-08 22:27:01,430 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2022-08-08 22:27:01,861 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2022-08-08 22:27:01,861 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\src\main\resources
+2022-08-08 22:27:01,861 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2022-08-08 22:27:01,861 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\86186\AppData\Local\Temp\protocjar11983287854429211697\include
+2022-08-08 22:27:01,862 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2022-08-08 22:27:01,862 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2022-08-08 22:27:01,862 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2022-08-08 22:27:01,862 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2022-08-08 22:27:01,913 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2022-08-08 22:27:01,914 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2022-08-08 22:27:02,076 [Worker-6: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SmartMedical/src/main/java
+2022-08-08 22:27:02,077 [Worker-6: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SmartMedical/src/main/resources
+2022-08-08 22:27:02,102 [Worker-6: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SmartMedical/src/test/java
+2022-08-08 22:27:02,103 [Worker-6: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SmartMedical/src/test/resources
+2022-08-08 22:27:02,426 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2022-08-08 22:27:02,636 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2022-08-08 22:27:03,012 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\86186\AppData\Local\Temp\protocjar9379168064917401605\bin\protoc.exe
+2022-08-08 22:27:03,014 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\86186\AppData\Local\Temp\protocjar16044349814835728768\include
+2022-08-08 22:27:03,088 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2022-08-08 22:27:03,091 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2022-08-08 22:27:03,092 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2022-08-08 22:27:03,094 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2022-08-08 22:27:03,096 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2022-08-08 22:27:03,097 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2022-08-08 22:27:03,098 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2022-08-08 22:27:03,099 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2022-08-08 22:27:03,101 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2022-08-08 22:27:03,101 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2022-08-08 22:27:03,102 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2022-08-08 22:27:03,104 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2022-08-08 22:27:03,433 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2022-08-08 22:27:03,434 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\src\main\resources
+2022-08-08 22:27:03,434 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2022-08-08 22:27:03,434 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\86186\AppData\Local\Temp\protocjar16044349814835728768\include
+2022-08-08 22:27:03,434 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2022-08-08 22:27:03,434 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2022-08-08 22:27:03,434 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: D:\OneDrive\OneDrive - National College of Ireland\backup\d\Distributed Systems\CA-MANDY\DSystem-gRPC\SmartMedical\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2022-08-08 22:27:03,434 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2022-08-08 22:27:03,442 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2022-08-08 22:27:03,443 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2022-08-08 22:27:03,457 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-08 22:27:03,458 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-08 22:27:03,461 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-08 22:27:03,461 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
