@@ -1,0 +1,37 @@
+syntax = "proto3";// Make sure to have proto3 for your proto files.
+// generate separate or multiple java file for each generated class.
+option java_multiple_files = true;
+// Package inside the src/main/java where generated classes will reside.
+option java_package = "smart.medical.appointmentService";
+// Class name of the wrapper class which represent this file.
+option java_outer_classname = "appointmentServiceImpl";
+
+package smart;
+
+service SmartAppointmentService {
+ //Bi-Directional Streaming
+ rpc mobileAppointment  (stream AppointmentInfoRequest) returns (stream AppointmentInfoReply) {}
+
+ //Unary
+ //rpc oneClickCancellation (OneClickCancellationRequest) returns (CancellationStatusReply) {}
+
+ }
+
+ message AppointmentInfoRequest{
+	string date = 1;
+	string doctor = 2;
+	string time = 3;
+}
+message AppointmentInfoReply{
+	string msg_date = 1;
+	string msg_doctor = 2;
+	string msg_time = 3;
+}
+
+ /*
+ message OneClickCancellationRequest{
+	string item = 1;
+}
+message CancellationStatusReply{
+	string message = 1;
+}*/
