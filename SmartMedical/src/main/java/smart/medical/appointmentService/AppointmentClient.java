@@ -23,12 +23,22 @@ public class AppointmentClient {
 		
 		System.out.println("Appointment method START===");
 		mobileAppointment();
-		
-		
+		System.out.println("OneClickCancellation method START===");
+		oneClickCancellation();
 		
 		channel.shutdown();
 		
 	}
+	public static void oneClickCancellation() {
+		// First creating a request message. Here, the message contains a string in setVal
+		OneClickCancellationRequest req = OneClickCancellationRequest.newBuilder().setCancellation("cancel").build();
+		//  Calling a remote RPC method using blocking stub defined in main method. req is the message we want to pass.
+		CancellationStatusReply response = blockingStub.oneClickCancellation(req);
+
+		//response contains the output from the server side. Here, we are printing the value contained by response. 
+		System.out.println(response.getMessage());
+	}
+	
 	public static void mobileAppointment() {
 		// TODO Auto-generated method stub
 		StreamObserver<AppointmentInfoReply> responseObserver = 

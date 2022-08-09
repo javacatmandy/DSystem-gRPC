@@ -107,45 +107,19 @@ public class AppointmentServer extends SmartAppointmentServiceImplBase{
 			
 		};//return statement, don't forget ";"
 	}
-	/*
-	public StreamObserver<AirPuriRequest> openCloseAirPurifier (
-			StreamObserver<AirPuriReply> responseObserver){
-				return new StreamObserver<AirPuriRequest>() {
-
-					@Override
-					public void onNext(AirPuriRequest value) {
-						// TODO Auto-generated method stub
-						System.out.println("receiving openCloseAirPurifier method: " + value.getVal());
-						String pmCheck = value.getVal();
-						String msg = "";
-						if (pmCheck.equalsIgnoreCase("pm2.5")) {
-							if(value.getFigure()<= 180) {
-								msg = pmCheck+" level in the air is: "+value.getFigure()+", it's within the healthy range and the purifier remains off";
-							}
-							else {
-								msg = pmCheck+" level in the air is: "+value.getFigure()+", it's exceeds healthy range and the purifier is on";
-								
-							}
-						}
-						AirPuriReply reply = AirPuriReply.newBuilder().setMessage(msg).build();
-						
-						responseObserver.onNext(reply);
-					}
-
-					@Override
-					public void onError(Throwable t) {
-						// TODO Auto-generated method stub
-						
-					}
-
-					@Override
-					public void onCompleted() {
-						// TODO Auto-generated method stub
-						responseObserver.onCompleted();
-					}
-					
-				};
+	public void oneClickCancellation(OneClickCancellationRequest request,
+			StreamObserver<CancellationStatusReply> responseObserver ) {
+		System.out.println("receiving cancellation request: "+request.getCancellation());
+		String msg = "ok ";
+		if(request.getCancellation().equalsIgnoreCase("cancel")) {
+			msg = "The status is cancelled.";
+		}
 		
-	}*/
+		CancellationStatusReply reply = CancellationStatusReply.newBuilder().setMessage(msg).build();
+		  responseObserver.onNext(reply);
+
+	      responseObserver.onCompleted();
+	}
+	
 	
 }
