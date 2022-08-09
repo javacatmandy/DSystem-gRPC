@@ -15,6 +15,16 @@ public final class realTimeMonitoringServiceImpl {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_smart_LowBloodOxygenAlertRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_smart_LowBloodOxygenAlertRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_smart_AlertReply_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_smart_AlertReply_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_smart_HeartbeatRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -44,15 +54,19 @@ public final class realTimeMonitoringServiceImpl {
   static {
     java.lang.String[] descriptorData = {
       "\n\037RealTimeMonitoringService.proto\022\005smart" +
-      "\" \n\020HeartbeatRequest\022\014\n\004time\030\001 \001(\005\" \n\016He" +
-      "artbeatReply\022\016\n\006result\030\001 \001(\005\"3\n\033OneClick" +
-      "CancellationRequest\022\024\n\014cancellation\030\001 \001(" +
-      "\t\"*\n\027CancellationStatusReply\022\017\n\007message\030" +
-      "\001 \001(\t2m\n\031RealTimeMonitoringService\022P\n\032re" +
-      "alTimeHeartbeatDetection\022\027.smart.Heartbe" +
-      "atRequest\032\025.smart.HeartbeatReply\"\0000\001BJ\n\'" +
-      "smart.medical.realTimeMonitoringServiceB" +
-      "\035realTimeMonitoringServiceImplP\001b\006proto3"
+      "\")\n\032LowBloodOxygenAlertRequest\022\013\n\003num\030\001 " +
+      "\001(\002\"\035\n\nAlertReply\022\017\n\007message\030\001 \001(\t\" \n\020He" +
+      "artbeatRequest\022\014\n\004time\030\001 \001(\005\" \n\016Heartbea" +
+      "tReply\022\016\n\006result\030\001 \001(\005\"3\n\033OneClickCancel" +
+      "lationRequest\022\024\n\014cancellation\030\001 \001(\t\"*\n\027C" +
+      "ancellationStatusReply\022\017\n\007message\030\001 \001(\t2" +
+      "\274\001\n\031RealTimeMonitoringService\022P\n\032realTim" +
+      "eHeartbeatDetection\022\027.smart.HeartbeatReq" +
+      "uest\032\025.smart.HeartbeatReply\"\0000\001\022M\n\023lowBl" +
+      "oodOxygenAlert\022!.smart.LowBloodOxygenAle" +
+      "rtRequest\032\021.smart.AlertReply\"\000BJ\n\'smart." +
+      "medical.realTimeMonitoringServiceB\035realT" +
+      "imeMonitoringServiceImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,26 +80,38 @@ public final class realTimeMonitoringServiceImpl {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_smart_HeartbeatRequest_descriptor =
+    internal_static_smart_LowBloodOxygenAlertRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_smart_LowBloodOxygenAlertRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_smart_LowBloodOxygenAlertRequest_descriptor,
+        new java.lang.String[] { "Num", });
+    internal_static_smart_AlertReply_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_smart_AlertReply_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_smart_AlertReply_descriptor,
+        new java.lang.String[] { "Message", });
+    internal_static_smart_HeartbeatRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_smart_HeartbeatRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smart_HeartbeatRequest_descriptor,
         new java.lang.String[] { "Time", });
     internal_static_smart_HeartbeatReply_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_smart_HeartbeatReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smart_HeartbeatReply_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_smart_OneClickCancellationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_smart_OneClickCancellationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smart_OneClickCancellationRequest_descriptor,
         new java.lang.String[] { "Cancellation", });
     internal_static_smart_CancellationStatusReply_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_smart_CancellationStatusReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smart_CancellationStatusReply_descriptor,

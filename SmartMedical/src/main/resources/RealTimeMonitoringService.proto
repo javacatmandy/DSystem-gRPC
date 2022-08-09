@@ -13,10 +13,15 @@ service RealTimeMonitoringService {
  rpc realTimeHeartbeatDetection (HeartbeatRequest) returns (stream HeartbeatReply) {}
 
  //Unary
- //rpc lowBloodOxygenAlert (LowBloodOxygenAlertRequest) returns (AlertReply) {}
+ rpc lowBloodOxygenAlert (LowBloodOxygenAlertRequest) returns (AlertReply) {}
 
  }
-
+ message LowBloodOxygenAlertRequest{
+	float num = 1;
+}
+message AlertReply{
+	string message = 1;
+}
  message HeartbeatRequest{
 	int32 time = 1;
 
@@ -25,6 +30,8 @@ message HeartbeatReply{
 	int32 result = 1;
 
 }
+
+
 
 
  message OneClickCancellationRequest{

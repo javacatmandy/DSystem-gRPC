@@ -59,6 +59,38 @@ public final class RealTimeMonitoringServiceGrpc {
      return getRealTimeHeartbeatDetectionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<smart.medical.realTimeMonitoringService.LowBloodOxygenAlertRequest,
+      smart.medical.realTimeMonitoringService.AlertReply> getLowBloodOxygenAlertMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "lowBloodOxygenAlert",
+      requestType = smart.medical.realTimeMonitoringService.LowBloodOxygenAlertRequest.class,
+      responseType = smart.medical.realTimeMonitoringService.AlertReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<smart.medical.realTimeMonitoringService.LowBloodOxygenAlertRequest,
+      smart.medical.realTimeMonitoringService.AlertReply> getLowBloodOxygenAlertMethod() {
+    io.grpc.MethodDescriptor<smart.medical.realTimeMonitoringService.LowBloodOxygenAlertRequest, smart.medical.realTimeMonitoringService.AlertReply> getLowBloodOxygenAlertMethod;
+    if ((getLowBloodOxygenAlertMethod = RealTimeMonitoringServiceGrpc.getLowBloodOxygenAlertMethod) == null) {
+      synchronized (RealTimeMonitoringServiceGrpc.class) {
+        if ((getLowBloodOxygenAlertMethod = RealTimeMonitoringServiceGrpc.getLowBloodOxygenAlertMethod) == null) {
+          RealTimeMonitoringServiceGrpc.getLowBloodOxygenAlertMethod = getLowBloodOxygenAlertMethod = 
+              io.grpc.MethodDescriptor.<smart.medical.realTimeMonitoringService.LowBloodOxygenAlertRequest, smart.medical.realTimeMonitoringService.AlertReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "smart.RealTimeMonitoringService", "lowBloodOxygenAlert"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  smart.medical.realTimeMonitoringService.LowBloodOxygenAlertRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  smart.medical.realTimeMonitoringService.AlertReply.getDefaultInstance()))
+                  .setSchemaDescriptor(new RealTimeMonitoringServiceMethodDescriptorSupplier("lowBloodOxygenAlert"))
+                  .build();
+          }
+        }
+     }
+     return getLowBloodOxygenAlertMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -96,6 +128,16 @@ public final class RealTimeMonitoringServiceGrpc {
       asyncUnimplementedUnaryCall(getRealTimeHeartbeatDetectionMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     *Unary
+     * </pre>
+     */
+    public void lowBloodOxygenAlert(smart.medical.realTimeMonitoringService.LowBloodOxygenAlertRequest request,
+        io.grpc.stub.StreamObserver<smart.medical.realTimeMonitoringService.AlertReply> responseObserver) {
+      asyncUnimplementedUnaryCall(getLowBloodOxygenAlertMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -105,6 +147,13 @@ public final class RealTimeMonitoringServiceGrpc {
                 smart.medical.realTimeMonitoringService.HeartbeatRequest,
                 smart.medical.realTimeMonitoringService.HeartbeatReply>(
                   this, METHODID_REAL_TIME_HEARTBEAT_DETECTION)))
+          .addMethod(
+            getLowBloodOxygenAlertMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                smart.medical.realTimeMonitoringService.LowBloodOxygenAlertRequest,
+                smart.medical.realTimeMonitoringService.AlertReply>(
+                  this, METHODID_LOW_BLOOD_OXYGEN_ALERT)))
           .build();
     }
   }
@@ -137,6 +186,17 @@ public final class RealTimeMonitoringServiceGrpc {
       asyncServerStreamingCall(
           getChannel().newCall(getRealTimeHeartbeatDetectionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     *Unary
+     * </pre>
+     */
+    public void lowBloodOxygenAlert(smart.medical.realTimeMonitoringService.LowBloodOxygenAlertRequest request,
+        io.grpc.stub.StreamObserver<smart.medical.realTimeMonitoringService.AlertReply> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getLowBloodOxygenAlertMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -167,6 +227,16 @@ public final class RealTimeMonitoringServiceGrpc {
       return blockingServerStreamingCall(
           getChannel(), getRealTimeHeartbeatDetectionMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     *Unary
+     * </pre>
+     */
+    public smart.medical.realTimeMonitoringService.AlertReply lowBloodOxygenAlert(smart.medical.realTimeMonitoringService.LowBloodOxygenAlertRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getLowBloodOxygenAlertMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -186,9 +256,21 @@ public final class RealTimeMonitoringServiceGrpc {
         io.grpc.CallOptions callOptions) {
       return new RealTimeMonitoringServiceFutureStub(channel, callOptions);
     }
+
+    /**
+     * <pre>
+     *Unary
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<smart.medical.realTimeMonitoringService.AlertReply> lowBloodOxygenAlert(
+        smart.medical.realTimeMonitoringService.LowBloodOxygenAlertRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getLowBloodOxygenAlertMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REAL_TIME_HEARTBEAT_DETECTION = 0;
+  private static final int METHODID_LOW_BLOOD_OXYGEN_ALERT = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -210,6 +292,10 @@ public final class RealTimeMonitoringServiceGrpc {
         case METHODID_REAL_TIME_HEARTBEAT_DETECTION:
           serviceImpl.realTimeHeartbeatDetection((smart.medical.realTimeMonitoringService.HeartbeatRequest) request,
               (io.grpc.stub.StreamObserver<smart.medical.realTimeMonitoringService.HeartbeatReply>) responseObserver);
+          break;
+        case METHODID_LOW_BLOOD_OXYGEN_ALERT:
+          serviceImpl.lowBloodOxygenAlert((smart.medical.realTimeMonitoringService.LowBloodOxygenAlertRequest) request,
+              (io.grpc.stub.StreamObserver<smart.medical.realTimeMonitoringService.AlertReply>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -273,6 +359,7 @@ public final class RealTimeMonitoringServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new RealTimeMonitoringServiceFileDescriptorSupplier())
               .addMethod(getRealTimeHeartbeatDetectionMethod())
+              .addMethod(getLowBloodOxygenAlertMethod())
               .build();
         }
       }
