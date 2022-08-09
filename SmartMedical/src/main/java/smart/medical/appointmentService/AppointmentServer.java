@@ -61,20 +61,20 @@ public class AppointmentServer extends SmartAppointmentServiceImplBase{
 			public void onNext(AppointmentInfoRequest value) {
 				// TODO Auto-generated method stub
 				
-				System.out.println("Info: " +value.getInfo());
+				System.out.println("Request Info: " +value.getInfo());
 				String info = "";
 				info = value.getInfo();
 				String msg = "";
 				if(info.equalsIgnoreCase("date")) {
-					msg = "The available date is 09-AUG-2022";
+					msg = " available date is 09-AUG-2022";
 					//System.out.println(msg);
 				}
 				else if(info.equalsIgnoreCase("doctor")) {
-					msg = "The available doctor is kevin";
+					msg = " available doctor is kevin";
 					//System.out.println(msg);
 				}
 				else if(info.equalsIgnoreCase("time")) {
-					msg = "The available time is 10:15";
+					msg = " available time is 10:15";
 					//System.out.println(msg);
 				}
 				else {
@@ -84,7 +84,7 @@ public class AppointmentServer extends SmartAppointmentServiceImplBase{
 				
 				AppointmentInfoReply reply = AppointmentInfoReply.newBuilder().setMessage(msg).build();
 				
-				
+				responseObserver.onNext(reply);
 				
 			}
 
@@ -101,7 +101,7 @@ public class AppointmentServer extends SmartAppointmentServiceImplBase{
 				System.out.println("receiving appointment method completed \n");
 				
 				
-				//responseObserver.onNext(reply);
+				//
 				responseObserver.onCompleted();
 			}
 			

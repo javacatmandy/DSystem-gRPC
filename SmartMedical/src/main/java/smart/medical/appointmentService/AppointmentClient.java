@@ -37,13 +37,13 @@ public class AppointmentClient {
 					@Override
 					public void onNext(AppointmentInfoReply value) {
 						// TODO Auto-generated method stub
-						System.out.println("received is " + value.getMessage());
+						System.out.println("received " + value.getMessage());
 					}
 
 					@Override
 					public void onError(Throwable t) {
 						// TODO Auto-generated method stub
-						
+						t.printStackTrace();
 					}
 
 					@Override
