@@ -59,6 +59,38 @@ public final class SmartAppointmentServiceGrpc {
      return getMobileAppointmentMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<smart.medical.appointmentService.OneClickCancellationRequest,
+      smart.medical.appointmentService.CancellationStatusReply> getOneClickCancellationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "oneClickCancellation",
+      requestType = smart.medical.appointmentService.OneClickCancellationRequest.class,
+      responseType = smart.medical.appointmentService.CancellationStatusReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<smart.medical.appointmentService.OneClickCancellationRequest,
+      smart.medical.appointmentService.CancellationStatusReply> getOneClickCancellationMethod() {
+    io.grpc.MethodDescriptor<smart.medical.appointmentService.OneClickCancellationRequest, smart.medical.appointmentService.CancellationStatusReply> getOneClickCancellationMethod;
+    if ((getOneClickCancellationMethod = SmartAppointmentServiceGrpc.getOneClickCancellationMethod) == null) {
+      synchronized (SmartAppointmentServiceGrpc.class) {
+        if ((getOneClickCancellationMethod = SmartAppointmentServiceGrpc.getOneClickCancellationMethod) == null) {
+          SmartAppointmentServiceGrpc.getOneClickCancellationMethod = getOneClickCancellationMethod = 
+              io.grpc.MethodDescriptor.<smart.medical.appointmentService.OneClickCancellationRequest, smart.medical.appointmentService.CancellationStatusReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "smart.SmartAppointmentService", "oneClickCancellation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  smart.medical.appointmentService.OneClickCancellationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  smart.medical.appointmentService.CancellationStatusReply.getDefaultInstance()))
+                  .setSchemaDescriptor(new SmartAppointmentServiceMethodDescriptorSupplier("oneClickCancellation"))
+                  .build();
+          }
+        }
+     }
+     return getOneClickCancellationMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -96,6 +128,16 @@ public final class SmartAppointmentServiceGrpc {
       return asyncUnimplementedStreamingCall(getMobileAppointmentMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     *Unary
+     * </pre>
+     */
+    public void oneClickCancellation(smart.medical.appointmentService.OneClickCancellationRequest request,
+        io.grpc.stub.StreamObserver<smart.medical.appointmentService.CancellationStatusReply> responseObserver) {
+      asyncUnimplementedUnaryCall(getOneClickCancellationMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -105,6 +147,13 @@ public final class SmartAppointmentServiceGrpc {
                 smart.medical.appointmentService.AppointmentInfoRequest,
                 smart.medical.appointmentService.AppointmentInfoReply>(
                   this, METHODID_MOBILE_APPOINTMENT)))
+          .addMethod(
+            getOneClickCancellationMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                smart.medical.appointmentService.OneClickCancellationRequest,
+                smart.medical.appointmentService.CancellationStatusReply>(
+                  this, METHODID_ONE_CLICK_CANCELLATION)))
           .build();
     }
   }
@@ -137,6 +186,17 @@ public final class SmartAppointmentServiceGrpc {
       return asyncBidiStreamingCall(
           getChannel().newCall(getMobileAppointmentMethod(), getCallOptions()), responseObserver);
     }
+
+    /**
+     * <pre>
+     *Unary
+     * </pre>
+     */
+    public void oneClickCancellation(smart.medical.appointmentService.OneClickCancellationRequest request,
+        io.grpc.stub.StreamObserver<smart.medical.appointmentService.CancellationStatusReply> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getOneClickCancellationMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -155,6 +215,16 @@ public final class SmartAppointmentServiceGrpc {
     protected SmartAppointmentServiceBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new SmartAppointmentServiceBlockingStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     *Unary
+     * </pre>
+     */
+    public smart.medical.appointmentService.CancellationStatusReply oneClickCancellation(smart.medical.appointmentService.OneClickCancellationRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getOneClickCancellationMethod(), getCallOptions(), request);
     }
   }
 
@@ -175,9 +245,21 @@ public final class SmartAppointmentServiceGrpc {
         io.grpc.CallOptions callOptions) {
       return new SmartAppointmentServiceFutureStub(channel, callOptions);
     }
+
+    /**
+     * <pre>
+     *Unary
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<smart.medical.appointmentService.CancellationStatusReply> oneClickCancellation(
+        smart.medical.appointmentService.OneClickCancellationRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getOneClickCancellationMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_MOBILE_APPOINTMENT = 0;
+  private static final int METHODID_ONE_CLICK_CANCELLATION = 0;
+  private static final int METHODID_MOBILE_APPOINTMENT = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -196,6 +278,10 @@ public final class SmartAppointmentServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_ONE_CLICK_CANCELLATION:
+          serviceImpl.oneClickCancellation((smart.medical.appointmentService.OneClickCancellationRequest) request,
+              (io.grpc.stub.StreamObserver<smart.medical.appointmentService.CancellationStatusReply>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -261,6 +347,7 @@ public final class SmartAppointmentServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SmartAppointmentServiceFileDescriptorSupplier())
               .addMethod(getMobileAppointmentMethod())
+              .addMethod(getOneClickCancellationMethod())
               .build();
         }
       }

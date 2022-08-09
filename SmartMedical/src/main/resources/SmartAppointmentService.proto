@@ -13,7 +13,7 @@ service SmartAppointmentService {
  rpc mobileAppointment  (stream AppointmentInfoRequest) returns (stream AppointmentInfoReply) {}
 
  //Unary
- //rpc oneClickCancellation (OneClickCancellationRequest) returns (CancellationStatusReply) {}
+ rpc oneClickCancellation (OneClickCancellationRequest) returns (CancellationStatusReply) {}
 
  }
 
@@ -26,10 +26,10 @@ message AppointmentInfoReply{
 
 }
 
- /*
+
  message OneClickCancellationRequest{
-	string item = 1;
+	string cancellation = 1;
 }
 message CancellationStatusReply{
 	string message = 1;
-}*/
+}
