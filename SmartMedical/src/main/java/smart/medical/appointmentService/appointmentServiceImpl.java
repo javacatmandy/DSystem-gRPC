@@ -33,16 +33,14 @@ public final class appointmentServiceImpl {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\035SmartAppointmentService.proto\022\005smart\"D" +
-      "\n\026AppointmentInfoRequest\022\014\n\004date\030\001 \001(\t\022\016" +
-      "\n\006doctor\030\002 \001(\t\022\014\n\004time\030\003 \001(\t\"N\n\024Appointm" +
-      "entInfoReply\022\020\n\010msg_date\030\001 \001(\t\022\022\n\nmsg_do" +
-      "ctor\030\002 \001(\t\022\020\n\010msg_time\030\003 \001(\t2p\n\027SmartApp" +
-      "ointmentService\022U\n\021mobileAppointment\022\035.s" +
-      "mart.AppointmentInfoRequest\032\033.smart.Appo" +
-      "intmentInfoReply\"\000(\0010\001B<\n smart.medical." +
-      "appointmentServiceB\026appointmentServiceIm" +
-      "plP\001b\006proto3"
+      "\n\035SmartAppointmentService.proto\022\005smart\"&" +
+      "\n\026AppointmentInfoRequest\022\014\n\004Info\030\001 \001(\t\"\'" +
+      "\n\024AppointmentInfoReply\022\017\n\007message\030\001 \001(\t2" +
+      "p\n\027SmartAppointmentService\022U\n\021mobileAppo" +
+      "intment\022\035.smart.AppointmentInfoRequest\032\033" +
+      ".smart.AppointmentInfoReply\"\000(\0010\001B<\n sma" +
+      "rt.medical.appointmentServiceB\026appointme" +
+      "ntServiceImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -61,13 +59,13 @@ public final class appointmentServiceImpl {
     internal_static_smart_AppointmentInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smart_AppointmentInfoRequest_descriptor,
-        new java.lang.String[] { "Date", "Doctor", "Time", });
+        new java.lang.String[] { "Info", });
     internal_static_smart_AppointmentInfoReply_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_smart_AppointmentInfoReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smart_AppointmentInfoReply_descriptor,
-        new java.lang.String[] { "MsgDate", "MsgDoctor", "MsgTime", });
+        new java.lang.String[] { "Message", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -61,13 +61,29 @@ public class AppointmentServer extends SmartAppointmentServiceImplBase{
 			public void onNext(AppointmentInfoRequest value) {
 				// TODO Auto-generated method stub
 				
-				System.out.println("Available date: " +value.getDate());
-				System.out.println("Available doctor: " +value.getDoctor());
-				System.out.println("Available time: " +value.getTime());
+				System.out.println("Info: " +value.getInfo());
+				String info = "";
+				info = value.getInfo();
+				String msg = "";
+				if(info.equalsIgnoreCase("date")) {
+					msg = "The available date is 09-AUG-2022";
+					//System.out.println(msg);
+				}
+				else if(info.equalsIgnoreCase("doctor")) {
+					msg = "The available doctor is kevin";
+					//System.out.println(msg);
+				}
+				else if(info.equalsIgnoreCase("time")) {
+					msg = "The available time is 10:15";
+					//System.out.println(msg);
+				}
+				else {
+					msg = "Info not available";
+					//System.out.println(msg);
+				}
 				
-				list.add(value.getDate());
-				list.add(value.getDoctor());
-				list.add(value.getTime());
+				AppointmentInfoReply reply = AppointmentInfoReply.newBuilder().setMessage(msg).build();
+				
 				
 				
 			}
@@ -83,14 +99,9 @@ public class AppointmentServer extends SmartAppointmentServiceImplBase{
 				// TODO Auto-generated method stub
 				
 				System.out.println("receiving appointment method completed \n");
-				String availableInfo = "";
-				for(String s: list) {
-					availableInfo += s ;
-				}
-				availableInfo = availableInfo +  " is available";
 				
-				AppointmentInfoReply reply = AppointmentInfoReply.newBuilder().setMsgDate(availableInfo ).build();
-				responseObserver.onNext(reply);
+				
+				//responseObserver.onNext(reply);
 				responseObserver.onCompleted();
 			}
 			

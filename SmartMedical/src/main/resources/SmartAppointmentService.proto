@@ -18,14 +18,12 @@ service SmartAppointmentService {
  }
 
  message AppointmentInfoRequest{
-	string date = 1;
-	string doctor = 2;
-	string time = 3;
+	string Info = 1;
+
 }
 message AppointmentInfoReply{
-	string msg_date = 1;
-	string msg_doctor = 2;
-	string msg_time = 3;
+	string message = 1;
+
 }
 
  /*

@@ -8,32 +8,12 @@ public interface AppointmentInfoRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string date = 1;</code>
+   * <code>string Info = 1;</code>
    */
-  java.lang.String getDate();
+  java.lang.String getInfo();
   /**
-   * <code>string date = 1;</code>
+   * <code>string Info = 1;</code>
    */
   com.google.protobuf.ByteString
-      getDateBytes();
-
-  /**
-   * <code>string doctor = 2;</code>
-   */
-  java.lang.String getDoctor();
-  /**
-   * <code>string doctor = 2;</code>
-   */
-  com.google.protobuf.ByteString
-      getDoctorBytes();
-
-  /**
-   * <code>string time = 3;</code>
-   */
-  java.lang.String getTime();
-  /**
-   * <code>string time = 3;</code>
-   */
-  com.google.protobuf.ByteString
-      getTimeBytes();
+      getInfoBytes();
 }

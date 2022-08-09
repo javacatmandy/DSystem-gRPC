@@ -37,7 +37,7 @@ public class AppointmentClient {
 					@Override
 					public void onNext(AppointmentInfoReply value) {
 						// TODO Auto-generated method stub
-						System.out.println("received is " + value.getMsgDate());
+						System.out.println("received is " + value.getMessage());
 					}
 
 					@Override
@@ -57,7 +57,9 @@ public class AppointmentClient {
 				
 				StreamObserver<AppointmentInfoRequest> requestObserver = asyncStub.mobileAppointment(responseObserver);
 				try {
-					requestObserver.onNext(AppointmentInfoRequest.newBuilder().setDate("available date").setDoctor("available doctor").setTime("available time").build());
+					requestObserver.onNext(AppointmentInfoRequest.newBuilder().setInfo("Date").build());
+					requestObserver.onNext(AppointmentInfoRequest.newBuilder().setInfo("Doctor").build());
+					requestObserver.onNext(AppointmentInfoRequest.newBuilder().setInfo("Time").build());
 					
 					System.out.println("sending message");
 					

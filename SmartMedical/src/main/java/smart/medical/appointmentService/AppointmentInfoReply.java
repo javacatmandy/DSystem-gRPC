@@ -16,9 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AppointmentInfoReply() {
-    msgDate_ = "";
-    msgDoctor_ = "";
-    msgTime_ = "";
+    message_ = "";
   }
 
   @java.lang.Override
@@ -48,19 +46,7 @@ private static final long serialVersionUID = 0L;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            msgDate_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            msgDoctor_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            msgTime_ = s;
+            message_ = s;
             break;
           }
           default: {
@@ -95,102 +81,34 @@ private static final long serialVersionUID = 0L;
             smart.medical.appointmentService.AppointmentInfoReply.class, smart.medical.appointmentService.AppointmentInfoReply.Builder.class);
   }
 
-  public static final int MSG_DATE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object msgDate_;
+  public static final int MESSAGE_FIELD_NUMBER = 1;
+  private volatile java.lang.Object message_;
   /**
-   * <code>string msg_date = 1;</code>
+   * <code>string message = 1;</code>
    */
-  public java.lang.String getMsgDate() {
-    java.lang.Object ref = msgDate_;
+  public java.lang.String getMessage() {
+    java.lang.Object ref = message_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      msgDate_ = s;
+      message_ = s;
       return s;
     }
   }
   /**
-   * <code>string msg_date = 1;</code>
+   * <code>string message = 1;</code>
    */
   public com.google.protobuf.ByteString
-      getMsgDateBytes() {
-    java.lang.Object ref = msgDate_;
+      getMessageBytes() {
+    java.lang.Object ref = message_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      msgDate_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int MSG_DOCTOR_FIELD_NUMBER = 2;
-  private volatile java.lang.Object msgDoctor_;
-  /**
-   * <code>string msg_doctor = 2;</code>
-   */
-  public java.lang.String getMsgDoctor() {
-    java.lang.Object ref = msgDoctor_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      msgDoctor_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string msg_doctor = 2;</code>
-   */
-  public com.google.protobuf.ByteString
-      getMsgDoctorBytes() {
-    java.lang.Object ref = msgDoctor_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      msgDoctor_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int MSG_TIME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object msgTime_;
-  /**
-   * <code>string msg_time = 3;</code>
-   */
-  public java.lang.String getMsgTime() {
-    java.lang.Object ref = msgTime_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      msgTime_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string msg_time = 3;</code>
-   */
-  public com.google.protobuf.ByteString
-      getMsgTimeBytes() {
-    java.lang.Object ref = msgTime_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      msgTime_ = b;
+      message_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -211,14 +129,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getMsgDateBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, msgDate_);
-    }
-    if (!getMsgDoctorBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, msgDoctor_);
-    }
-    if (!getMsgTimeBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, msgTime_);
+    if (!getMessageBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
     }
     unknownFields.writeTo(output);
   }
@@ -229,14 +141,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getMsgDateBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, msgDate_);
-    }
-    if (!getMsgDoctorBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, msgDoctor_);
-    }
-    if (!getMsgTimeBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, msgTime_);
+    if (!getMessageBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -254,12 +160,8 @@ private static final long serialVersionUID = 0L;
     smart.medical.appointmentService.AppointmentInfoReply other = (smart.medical.appointmentService.AppointmentInfoReply) obj;
 
     boolean result = true;
-    result = result && getMsgDate()
-        .equals(other.getMsgDate());
-    result = result && getMsgDoctor()
-        .equals(other.getMsgDoctor());
-    result = result && getMsgTime()
-        .equals(other.getMsgTime());
+    result = result && getMessage()
+        .equals(other.getMessage());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -271,12 +173,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + MSG_DATE_FIELD_NUMBER;
-    hash = (53 * hash) + getMsgDate().hashCode();
-    hash = (37 * hash) + MSG_DOCTOR_FIELD_NUMBER;
-    hash = (53 * hash) + getMsgDoctor().hashCode();
-    hash = (37 * hash) + MSG_TIME_FIELD_NUMBER;
-    hash = (53 * hash) + getMsgTime().hashCode();
+    hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getMessage().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -410,11 +308,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      msgDate_ = "";
-
-      msgDoctor_ = "";
-
-      msgTime_ = "";
+      message_ = "";
 
       return this;
     }
@@ -442,9 +336,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public smart.medical.appointmentService.AppointmentInfoReply buildPartial() {
       smart.medical.appointmentService.AppointmentInfoReply result = new smart.medical.appointmentService.AppointmentInfoReply(this);
-      result.msgDate_ = msgDate_;
-      result.msgDoctor_ = msgDoctor_;
-      result.msgTime_ = msgTime_;
+      result.message_ = message_;
       onBuilt();
       return result;
     }
@@ -493,16 +385,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(smart.medical.appointmentService.AppointmentInfoReply other) {
       if (other == smart.medical.appointmentService.AppointmentInfoReply.getDefaultInstance()) return this;
-      if (!other.getMsgDate().isEmpty()) {
-        msgDate_ = other.msgDate_;
-        onChanged();
-      }
-      if (!other.getMsgDoctor().isEmpty()) {
-        msgDoctor_ = other.msgDoctor_;
-        onChanged();
-      }
-      if (!other.getMsgTime().isEmpty()) {
-        msgTime_ = other.msgTime_;
+      if (!other.getMessage().isEmpty()) {
+        message_ = other.message_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -534,209 +418,71 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object msgDate_ = "";
+    private java.lang.Object message_ = "";
     /**
-     * <code>string msg_date = 1;</code>
+     * <code>string message = 1;</code>
      */
-    public java.lang.String getMsgDate() {
-      java.lang.Object ref = msgDate_;
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        msgDate_ = s;
+        message_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string msg_date = 1;</code>
+     * <code>string message = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getMsgDateBytes() {
-      java.lang.Object ref = msgDate_;
+        getMessageBytes() {
+      java.lang.Object ref = message_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        msgDate_ = b;
+        message_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string msg_date = 1;</code>
+     * <code>string message = 1;</code>
      */
-    public Builder setMsgDate(
+    public Builder setMessage(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      msgDate_ = value;
+      message_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string msg_date = 1;</code>
+     * <code>string message = 1;</code>
      */
-    public Builder clearMsgDate() {
+    public Builder clearMessage() {
       
-      msgDate_ = getDefaultInstance().getMsgDate();
+      message_ = getDefaultInstance().getMessage();
       onChanged();
       return this;
     }
     /**
-     * <code>string msg_date = 1;</code>
+     * <code>string message = 1;</code>
      */
-    public Builder setMsgDateBytes(
+    public Builder setMessageBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      msgDate_ = value;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object msgDoctor_ = "";
-    /**
-     * <code>string msg_doctor = 2;</code>
-     */
-    public java.lang.String getMsgDoctor() {
-      java.lang.Object ref = msgDoctor_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        msgDoctor_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string msg_doctor = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getMsgDoctorBytes() {
-      java.lang.Object ref = msgDoctor_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        msgDoctor_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string msg_doctor = 2;</code>
-     */
-    public Builder setMsgDoctor(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      msgDoctor_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string msg_doctor = 2;</code>
-     */
-    public Builder clearMsgDoctor() {
-      
-      msgDoctor_ = getDefaultInstance().getMsgDoctor();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string msg_doctor = 2;</code>
-     */
-    public Builder setMsgDoctorBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      msgDoctor_ = value;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object msgTime_ = "";
-    /**
-     * <code>string msg_time = 3;</code>
-     */
-    public java.lang.String getMsgTime() {
-      java.lang.Object ref = msgTime_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        msgTime_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string msg_time = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getMsgTimeBytes() {
-      java.lang.Object ref = msgTime_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        msgTime_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string msg_time = 3;</code>
-     */
-    public Builder setMsgTime(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      msgTime_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string msg_time = 3;</code>
-     */
-    public Builder clearMsgTime() {
-      
-      msgTime_ = getDefaultInstance().getMsgTime();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string msg_time = 3;</code>
-     */
-    public Builder setMsgTimeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      msgTime_ = value;
+      message_ = value;
       onChanged();
       return this;
     }
