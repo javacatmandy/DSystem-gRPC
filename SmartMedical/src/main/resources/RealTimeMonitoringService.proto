@@ -1,0 +1,35 @@
+syntax = "proto3";// Make sure to have proto3 for your proto files.
+// generate separate or multiple java file for each generated class.
+option java_multiple_files = true;
+// Package inside the src/main/java where generated classes will reside.
+option java_package = "smart.medical.realTimeMonitoringService";
+// Class name of the wrapper class which represent this file.
+option java_outer_classname = "realTimeMonitoringServiceImpl";
+
+package smart;
+
+service RealTimeMonitoringService {
+  //Server Streaming
+ rpc realTimeHeartbeatDetection (HeartbeatRequest) returns (stream HeartbeatReply) {}
+
+ //Unary
+ //rpc lowBloodOxygenAlert (LowBloodOxygenAlertRequest) returns (AlertReply) {}
+
+ }
+
+ message HeartbeatRequest{
+	int32 time = 1;
+
+}
+message HeartbeatReply{
+	int32 result = 1;
+
+}
+
+
+ message OneClickCancellationRequest{
+	string cancellation = 1;
+}
+message CancellationStatusReply{
+	string message = 1;
+}
