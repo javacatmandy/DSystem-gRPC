@@ -61,8 +61,13 @@ public class AppointmentServer extends SmartAppointmentServiceImplBase{
 			public void onNext(AppointmentInfoRequest value) {
 				// TODO Auto-generated method stub
 				
-				System.out.println("receiving Date: " +value.getDate());
+				System.out.println("Available date: " +value.getDate());
+				System.out.println("Available doctor: " +value.getDoctor());
+				System.out.println("Available time: " +value.getTime());
+				
 				list.add(value.getDate());
+				list.add(value.getDoctor());
+				list.add(value.getTime());
 				
 				
 			}
@@ -78,13 +83,13 @@ public class AppointmentServer extends SmartAppointmentServiceImplBase{
 				// TODO Auto-generated method stub
 				
 				System.out.println("receiving appointment method completed \n");
-				String availableDate = "Date: ";
+				String availableInfo = "";
 				for(String s: list) {
-					availableDate += s ;
+					availableInfo += s ;
 				}
-				availableDate = availableDate +  " being added";
+				availableInfo = availableInfo +  " is available";
 				
-				AppointmentInfoReply reply = AppointmentInfoReply.newBuilder().setMsgDate(availableDate ).build();
+				AppointmentInfoReply reply = AppointmentInfoReply.newBuilder().setMsgDate(availableInfo ).build();
 				responseObserver.onNext(reply);
 				responseObserver.onCompleted();
 			}
