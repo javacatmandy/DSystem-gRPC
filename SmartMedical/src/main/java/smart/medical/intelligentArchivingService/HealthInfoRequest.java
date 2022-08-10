@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private HealthInfoRequest() {
+    info_ = "";
     name_ = "";
     gender_ = "";
     diagnose_ = "";
@@ -48,16 +49,22 @@ private static final long serialVersionUID = 0L;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            name_ = s;
+            info_ = s;
             break;
           }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            gender_ = s;
+            name_ = s;
             break;
           }
           case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            gender_ = s;
+            break;
+          }
+          case 34: {
             java.lang.String s = input.readStringRequireUtf8();
 
             diagnose_ = s;
@@ -95,10 +102,44 @@ private static final long serialVersionUID = 0L;
             smart.medical.intelligentArchivingService.HealthInfoRequest.class, smart.medical.intelligentArchivingService.HealthInfoRequest.Builder.class);
   }
 
-  public static final int NAME_FIELD_NUMBER = 1;
+  public static final int INFO_FIELD_NUMBER = 1;
+  private volatile java.lang.Object info_;
+  /**
+   * <code>string info = 1;</code>
+   */
+  public java.lang.String getInfo() {
+    java.lang.Object ref = info_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      info_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string info = 1;</code>
+   */
+  public com.google.protobuf.ByteString
+      getInfoBytes() {
+    java.lang.Object ref = info_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      info_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int NAME_FIELD_NUMBER = 2;
   private volatile java.lang.Object name_;
   /**
-   * <code>string name = 1;</code>
+   * <code>string name = 2;</code>
    */
   public java.lang.String getName() {
     java.lang.Object ref = name_;
@@ -113,7 +154,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 1;</code>
+   * <code>string name = 2;</code>
    */
   public com.google.protobuf.ByteString
       getNameBytes() {
@@ -129,10 +170,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int GENDER_FIELD_NUMBER = 2;
+  public static final int GENDER_FIELD_NUMBER = 3;
   private volatile java.lang.Object gender_;
   /**
-   * <code>string gender = 2;</code>
+   * <code>string gender = 3;</code>
    */
   public java.lang.String getGender() {
     java.lang.Object ref = gender_;
@@ -147,7 +188,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string gender = 2;</code>
+   * <code>string gender = 3;</code>
    */
   public com.google.protobuf.ByteString
       getGenderBytes() {
@@ -163,10 +204,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int DIAGNOSE_FIELD_NUMBER = 3;
+  public static final int DIAGNOSE_FIELD_NUMBER = 4;
   private volatile java.lang.Object diagnose_;
   /**
-   * <code>string diagnose = 3;</code>
+   * <code>string diagnose = 4;</code>
    */
   public java.lang.String getDiagnose() {
     java.lang.Object ref = diagnose_;
@@ -181,7 +222,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string diagnose = 3;</code>
+   * <code>string diagnose = 4;</code>
    */
   public com.google.protobuf.ByteString
       getDiagnoseBytes() {
@@ -211,14 +252,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!getInfoBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, info_);
+    }
     if (!getNameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
     if (!getGenderBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, gender_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, gender_);
     }
     if (!getDiagnoseBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, diagnose_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, diagnose_);
     }
     unknownFields.writeTo(output);
   }
@@ -229,14 +273,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!getInfoBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, info_);
+    }
     if (!getNameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
     if (!getGenderBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, gender_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, gender_);
     }
     if (!getDiagnoseBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, diagnose_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, diagnose_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -254,6 +301,8 @@ private static final long serialVersionUID = 0L;
     smart.medical.intelligentArchivingService.HealthInfoRequest other = (smart.medical.intelligentArchivingService.HealthInfoRequest) obj;
 
     boolean result = true;
+    result = result && getInfo()
+        .equals(other.getInfo());
     result = result && getName()
         .equals(other.getName());
     result = result && getGender()
@@ -271,6 +320,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + INFO_FIELD_NUMBER;
+    hash = (53 * hash) + getInfo().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + GENDER_FIELD_NUMBER;
@@ -410,6 +461,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      info_ = "";
+
       name_ = "";
 
       gender_ = "";
@@ -442,6 +495,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public smart.medical.intelligentArchivingService.HealthInfoRequest buildPartial() {
       smart.medical.intelligentArchivingService.HealthInfoRequest result = new smart.medical.intelligentArchivingService.HealthInfoRequest(this);
+      result.info_ = info_;
       result.name_ = name_;
       result.gender_ = gender_;
       result.diagnose_ = diagnose_;
@@ -493,6 +547,10 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(smart.medical.intelligentArchivingService.HealthInfoRequest other) {
       if (other == smart.medical.intelligentArchivingService.HealthInfoRequest.getDefaultInstance()) return this;
+      if (!other.getInfo().isEmpty()) {
+        info_ = other.info_;
+        onChanged();
+      }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
         onChanged();
@@ -534,9 +592,78 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object info_ = "";
+    /**
+     * <code>string info = 1;</code>
+     */
+    public java.lang.String getInfo() {
+      java.lang.Object ref = info_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        info_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string info = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInfoBytes() {
+      java.lang.Object ref = info_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        info_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string info = 1;</code>
+     */
+    public Builder setInfo(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      info_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string info = 1;</code>
+     */
+    public Builder clearInfo() {
+      
+      info_ = getDefaultInstance().getInfo();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string info = 1;</code>
+     */
+    public Builder setInfoBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      info_ = value;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -551,7 +678,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -567,7 +694,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      */
     public Builder setName(
         java.lang.String value) {
@@ -580,7 +707,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      */
     public Builder clearName() {
       
@@ -589,7 +716,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
@@ -605,7 +732,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object gender_ = "";
     /**
-     * <code>string gender = 2;</code>
+     * <code>string gender = 3;</code>
      */
     public java.lang.String getGender() {
       java.lang.Object ref = gender_;
@@ -620,7 +747,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string gender = 2;</code>
+     * <code>string gender = 3;</code>
      */
     public com.google.protobuf.ByteString
         getGenderBytes() {
@@ -636,7 +763,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string gender = 2;</code>
+     * <code>string gender = 3;</code>
      */
     public Builder setGender(
         java.lang.String value) {
@@ -649,7 +776,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string gender = 2;</code>
+     * <code>string gender = 3;</code>
      */
     public Builder clearGender() {
       
@@ -658,7 +785,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string gender = 2;</code>
+     * <code>string gender = 3;</code>
      */
     public Builder setGenderBytes(
         com.google.protobuf.ByteString value) {
@@ -674,7 +801,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object diagnose_ = "";
     /**
-     * <code>string diagnose = 3;</code>
+     * <code>string diagnose = 4;</code>
      */
     public java.lang.String getDiagnose() {
       java.lang.Object ref = diagnose_;
@@ -689,7 +816,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string diagnose = 3;</code>
+     * <code>string diagnose = 4;</code>
      */
     public com.google.protobuf.ByteString
         getDiagnoseBytes() {
@@ -705,7 +832,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string diagnose = 3;</code>
+     * <code>string diagnose = 4;</code>
      */
     public Builder setDiagnose(
         java.lang.String value) {
@@ -718,7 +845,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string diagnose = 3;</code>
+     * <code>string diagnose = 4;</code>
      */
     public Builder clearDiagnose() {
       
@@ -727,7 +854,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string diagnose = 3;</code>
+     * <code>string diagnose = 4;</code>
      */
     public Builder setDiagnoseBytes(
         com.google.protobuf.ByteString value) {

@@ -56,13 +56,19 @@ public class archivingServer extends IntelligentArchivingServiceImplBase{
 		return new StreamObserver<HealthInfoRequest> () {
 
 			ArrayList<String> list = new ArrayList<>();
+			//String[] patient = new String[1];
 			@Override
 			//get one at a time
 			public void onNext(HealthInfoRequest value) {
 				// TODO Auto-generated method stub
 				
-				System.out.println("receiving patient's info: " +value.getName());
+				//System.out.println("receiving patient's info: " +value.getName()+value.getInfo());
+				//patient[0] = {value.getName(),value.getGender(), value.getDiagnose()};
+				list.add(value.getInfo());
 				list.add(value.getName());
+				list.add(value.getGender());
+				list.add(value.getDiagnose());
+				
 				
 				
 			}
@@ -76,15 +82,20 @@ public class archivingServer extends IntelligentArchivingServiceImplBase{
 			@Override
 			public void onCompleted() {
 				// TODO Auto-generated method stub
-				//System.out.println("currAirQuality method START===server3");
 				System.out.println("receiving healthProfile method completed \n");
-				String currAir = "Item: ";
+				String currInfo = " ";
 				for(String s: list) {
-					currAir += s ;
+					currInfo += s + " ";
 				}
-				currAir = currAir +  " being monitored";
+				currInfo += "is filing completed";
 				
-				ProfileNoReply reply = ProfileNoReply.newBuilder().setMessage(currAir ).build();
+				/*if(!list.isEmpty()) {
+					currInfo = currInfo + "is filing completed";
+				}else {
+					System.out.println("Filing is failed.");
+				}*/
+				
+				ProfileNoReply reply = ProfileNoReply.newBuilder().setMessage(currInfo).build();
 				responseObserver.onNext(reply);
 				responseObserver.onCompleted();
 			}

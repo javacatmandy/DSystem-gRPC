@@ -18,9 +18,11 @@ package smart;
  }
 
  message HealthInfoRequest{
-	string name = 1;
-	string gender = 2;
-	string diagnose = 3;
+	string info = 1;
+	string name = 2;
+	string gender = 3;
+	string diagnose = 4;
+
 }
 message ProfileNoReply{
 	string message = 1;

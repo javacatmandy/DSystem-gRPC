@@ -8,31 +8,41 @@ public interface HealthInfoRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1;</code>
+   * <code>string info = 1;</code>
+   */
+  java.lang.String getInfo();
+  /**
+   * <code>string info = 1;</code>
+   */
+  com.google.protobuf.ByteString
+      getInfoBytes();
+
+  /**
+   * <code>string name = 2;</code>
    */
   java.lang.String getName();
   /**
-   * <code>string name = 1;</code>
+   * <code>string name = 2;</code>
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string gender = 2;</code>
+   * <code>string gender = 3;</code>
    */
   java.lang.String getGender();
   /**
-   * <code>string gender = 2;</code>
+   * <code>string gender = 3;</code>
    */
   com.google.protobuf.ByteString
       getGenderBytes();
 
   /**
-   * <code>string diagnose = 3;</code>
+   * <code>string diagnose = 4;</code>
    */
   java.lang.String getDiagnose();
   /**
-   * <code>string diagnose = 3;</code>
+   * <code>string diagnose = 4;</code>
    */
   com.google.protobuf.ByteString
       getDiagnoseBytes();
