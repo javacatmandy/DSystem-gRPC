@@ -24,6 +24,16 @@ public final class intelligentArchivingServiceImpl {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_smart_ProfileNoReply_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_smart_DoctorRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_smart_DoctorRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_smart_DoctorReply_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_smart_DoctorReply_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -37,11 +47,15 @@ public final class intelligentArchivingServiceImpl {
       "rt\"Q\n\021HealthInfoRequest\022\014\n\004info\030\001 \001(\t\022\014\n" +
       "\004name\030\002 \001(\t\022\016\n\006gender\030\003 \001(\t\022\020\n\010diagnose\030" +
       "\004 \001(\t\"!\n\016ProfileNoReply\022\017\n\007message\030\001 \001(\t" +
-      "2c\n\033IntelligentArchivingService\022D\n\rhealt" +
-      "hProfile\022\030.smart.HealthInfoRequest\032\025.sma" +
-      "rt.ProfileNoReply\"\000(\001BN\n)smart.medical.i" +
-      "ntelligentArchivingServiceB\037intelligentA" +
-      "rchivingServiceImplP\001b\006proto3"
+      "\"*\n\rDoctorRequest\022\031\n\021requestAmysDoctor\030\001" +
+      " \001(\t\"\035\n\013DoctorReply\022\016\n\006doctor\030\001 \001(\t2\250\001\n\033" +
+      "IntelligentArchivingService\022D\n\rhealthPro" +
+      "file\022\030.smart.HealthInfoRequest\032\025.smart.P" +
+      "rofileNoReply\"\000(\001\022C\n\025responsibleDoctorIn" +
+      "fo\022\024.smart.DoctorRequest\032\022.smart.DoctorR" +
+      "eply\"\000BN\n)smart.medical.intelligentArchi" +
+      "vingServiceB\037intelligentArchivingService" +
+      "ImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -67,6 +81,18 @@ public final class intelligentArchivingServiceImpl {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smart_ProfileNoReply_descriptor,
         new java.lang.String[] { "Message", });
+    internal_static_smart_DoctorRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_smart_DoctorRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_smart_DoctorRequest_descriptor,
+        new java.lang.String[] { "RequestAmysDoctor", });
+    internal_static_smart_DoctorReply_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_smart_DoctorReply_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_smart_DoctorReply_descriptor,
+        new java.lang.String[] { "Doctor", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

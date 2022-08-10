@@ -13,7 +13,7 @@ package smart;
  rpc healthProfile (stream HealthInfoRequest) returns (ProfileNoReply) {}
 
  //Unary
- //rpc responsibleDoctorInfo (DoctorRequest) returns (DoctorReply) {}
+ rpc responsibleDoctorInfo (DoctorRequest) returns (DoctorReply) {}
 
  }
 
@@ -24,6 +24,16 @@ package smart;
 	string diagnose = 4;
 
 }
-message ProfileNoReply{
+ message ProfileNoReply{
 	string message = 1;
 }
+
+message DoctorRequest{
+	string requestAmysDoctor = 1;
+
+}
+ message DoctorReply{
+	string doctor = 1;
+}
+
+

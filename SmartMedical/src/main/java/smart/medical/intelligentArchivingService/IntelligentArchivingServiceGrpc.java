@@ -59,6 +59,38 @@ public final class IntelligentArchivingServiceGrpc {
      return getHealthProfileMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<smart.medical.intelligentArchivingService.DoctorRequest,
+      smart.medical.intelligentArchivingService.DoctorReply> getResponsibleDoctorInfoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "responsibleDoctorInfo",
+      requestType = smart.medical.intelligentArchivingService.DoctorRequest.class,
+      responseType = smart.medical.intelligentArchivingService.DoctorReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<smart.medical.intelligentArchivingService.DoctorRequest,
+      smart.medical.intelligentArchivingService.DoctorReply> getResponsibleDoctorInfoMethod() {
+    io.grpc.MethodDescriptor<smart.medical.intelligentArchivingService.DoctorRequest, smart.medical.intelligentArchivingService.DoctorReply> getResponsibleDoctorInfoMethod;
+    if ((getResponsibleDoctorInfoMethod = IntelligentArchivingServiceGrpc.getResponsibleDoctorInfoMethod) == null) {
+      synchronized (IntelligentArchivingServiceGrpc.class) {
+        if ((getResponsibleDoctorInfoMethod = IntelligentArchivingServiceGrpc.getResponsibleDoctorInfoMethod) == null) {
+          IntelligentArchivingServiceGrpc.getResponsibleDoctorInfoMethod = getResponsibleDoctorInfoMethod = 
+              io.grpc.MethodDescriptor.<smart.medical.intelligentArchivingService.DoctorRequest, smart.medical.intelligentArchivingService.DoctorReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "smart.IntelligentArchivingService", "responsibleDoctorInfo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  smart.medical.intelligentArchivingService.DoctorRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  smart.medical.intelligentArchivingService.DoctorReply.getDefaultInstance()))
+                  .setSchemaDescriptor(new IntelligentArchivingServiceMethodDescriptorSupplier("responsibleDoctorInfo"))
+                  .build();
+          }
+        }
+     }
+     return getResponsibleDoctorInfoMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -96,6 +128,16 @@ public final class IntelligentArchivingServiceGrpc {
       return asyncUnimplementedStreamingCall(getHealthProfileMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     *Unary
+     * </pre>
+     */
+    public void responsibleDoctorInfo(smart.medical.intelligentArchivingService.DoctorRequest request,
+        io.grpc.stub.StreamObserver<smart.medical.intelligentArchivingService.DoctorReply> responseObserver) {
+      asyncUnimplementedUnaryCall(getResponsibleDoctorInfoMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -105,6 +147,13 @@ public final class IntelligentArchivingServiceGrpc {
                 smart.medical.intelligentArchivingService.HealthInfoRequest,
                 smart.medical.intelligentArchivingService.ProfileNoReply>(
                   this, METHODID_HEALTH_PROFILE)))
+          .addMethod(
+            getResponsibleDoctorInfoMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                smart.medical.intelligentArchivingService.DoctorRequest,
+                smart.medical.intelligentArchivingService.DoctorReply>(
+                  this, METHODID_RESPONSIBLE_DOCTOR_INFO)))
           .build();
     }
   }
@@ -137,6 +186,17 @@ public final class IntelligentArchivingServiceGrpc {
       return asyncClientStreamingCall(
           getChannel().newCall(getHealthProfileMethod(), getCallOptions()), responseObserver);
     }
+
+    /**
+     * <pre>
+     *Unary
+     * </pre>
+     */
+    public void responsibleDoctorInfo(smart.medical.intelligentArchivingService.DoctorRequest request,
+        io.grpc.stub.StreamObserver<smart.medical.intelligentArchivingService.DoctorReply> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getResponsibleDoctorInfoMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -155,6 +215,16 @@ public final class IntelligentArchivingServiceGrpc {
     protected IntelligentArchivingServiceBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new IntelligentArchivingServiceBlockingStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     *Unary
+     * </pre>
+     */
+    public smart.medical.intelligentArchivingService.DoctorReply responsibleDoctorInfo(smart.medical.intelligentArchivingService.DoctorRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getResponsibleDoctorInfoMethod(), getCallOptions(), request);
     }
   }
 
@@ -175,9 +245,21 @@ public final class IntelligentArchivingServiceGrpc {
         io.grpc.CallOptions callOptions) {
       return new IntelligentArchivingServiceFutureStub(channel, callOptions);
     }
+
+    /**
+     * <pre>
+     *Unary
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<smart.medical.intelligentArchivingService.DoctorReply> responsibleDoctorInfo(
+        smart.medical.intelligentArchivingService.DoctorRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getResponsibleDoctorInfoMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_HEALTH_PROFILE = 0;
+  private static final int METHODID_RESPONSIBLE_DOCTOR_INFO = 0;
+  private static final int METHODID_HEALTH_PROFILE = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -196,6 +278,10 @@ public final class IntelligentArchivingServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_RESPONSIBLE_DOCTOR_INFO:
+          serviceImpl.responsibleDoctorInfo((smart.medical.intelligentArchivingService.DoctorRequest) request,
+              (io.grpc.stub.StreamObserver<smart.medical.intelligentArchivingService.DoctorReply>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -261,6 +347,7 @@ public final class IntelligentArchivingServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new IntelligentArchivingServiceFileDescriptorSupplier())
               .addMethod(getHealthProfileMethod())
+              .addMethod(getResponsibleDoctorInfoMethod())
               .build();
         }
       }
