@@ -62,4 +62,20 @@ public class monitoringServer extends RealTimeMonitoringServiceImplBase{
 		
 		responseObserver.onCompleted();
 	}
+	
+	public void lowBloodOxygenAlert(LowBloodOxygenAlertRequest request,
+			StreamObserver<AlertReply> responseObserver ) {
+		System.out.println("receiving lowBloodOxygen request: "+request.getNum());
+		String msg = "ok ";
+		if(request.getNum() < 0.95) {
+			msg = "Alert! The blood oxygen level is too low.";
+		}
+		
+		AlertReply reply = AlertReply.newBuilder().setMessage(msg).build();
+		  responseObserver.onNext(reply);
+
+	      responseObserver.onCompleted();
+	}
+	
+	
 }

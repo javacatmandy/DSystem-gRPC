@@ -27,8 +27,21 @@ public class monitoringClient {
 		System.out.println("real Time Monitoring Service start to check");
 		realTimeHeartbeatDetectionAsync();
 		
+		System.out.println("low Blood Oxygen Alert Service start");
+		lowBloodOxygenAlert();
+		
 		//closing the channel
 		channel.shutdown();
+	}
+	
+	public static void lowBloodOxygenAlert() {
+		// First creating a request message. Here, the message contains a number in setNum
+		LowBloodOxygenAlertRequest req = LowBloodOxygenAlertRequest.newBuilder().setNum((float) 0.93).build();
+		//  Calling a remote RPC method using blocking stub defined in main method. req is the message we want to pass.
+		AlertReply response = blockingStub.lowBloodOxygenAlert(req);
+
+		//response contains the output from the server side. Here, we are printing the value contained by response. 
+		System.out.println(response.getMessage());
 	}
 
 	public static void realTimeHeartbeatDetectionAsync() {
