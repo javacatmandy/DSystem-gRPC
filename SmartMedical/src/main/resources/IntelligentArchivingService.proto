@@ -1,0 +1,27 @@
+syntax = "proto3";// Make sure to have proto3 for your proto files.
+// generate separate or multiple java file for each generated class.
+option java_multiple_files = true;
+// Package inside the src/main/java where generated classes will reside.
+option java_package = "smart.medical.intelligentArchivingService";
+// Class name of the wrapper class which represent this file.
+option java_outer_classname = "intelligentArchivingServiceImpl";
+
+package smart;
+
+ service IntelligentArchivingService {
+ //Client Streaming
+ rpc healthProfile (stream HealthInfoRequest) returns (ProfileNoReply) {}
+
+ //Unary
+ //rpc responsibleDoctorInfo (DoctorRequest) returns (DoctorReply) {}
+
+ }
+
+ message HealthInfoRequest{
+	string name = 1;
+	string gender = 2;
+	string diagnose = 3;
+}
+message ProfileNoReply{
+	string message = 1;
+}
