@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private DoctorRequest() {
-    requestAmysDoctor_ = "";
+    requestPatientsDoctor_ = "";
   }
 
   @java.lang.Override
@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            requestAmysDoctor_ = s;
+            requestPatientsDoctor_ = s;
             break;
           }
           default: {
@@ -81,34 +81,34 @@ private static final long serialVersionUID = 0L;
             smart.medical.intelligentArchivingService.DoctorRequest.class, smart.medical.intelligentArchivingService.DoctorRequest.Builder.class);
   }
 
-  public static final int REQUESTAMYSDOCTOR_FIELD_NUMBER = 1;
-  private volatile java.lang.Object requestAmysDoctor_;
+  public static final int REQUESTPATIENTSDOCTOR_FIELD_NUMBER = 1;
+  private volatile java.lang.Object requestPatientsDoctor_;
   /**
-   * <code>string requestAmysDoctor = 1;</code>
+   * <code>string requestPatientsDoctor = 1;</code>
    */
-  public java.lang.String getRequestAmysDoctor() {
-    java.lang.Object ref = requestAmysDoctor_;
+  public java.lang.String getRequestPatientsDoctor() {
+    java.lang.Object ref = requestPatientsDoctor_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      requestAmysDoctor_ = s;
+      requestPatientsDoctor_ = s;
       return s;
     }
   }
   /**
-   * <code>string requestAmysDoctor = 1;</code>
+   * <code>string requestPatientsDoctor = 1;</code>
    */
   public com.google.protobuf.ByteString
-      getRequestAmysDoctorBytes() {
-    java.lang.Object ref = requestAmysDoctor_;
+      getRequestPatientsDoctorBytes() {
+    java.lang.Object ref = requestPatientsDoctor_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      requestAmysDoctor_ = b;
+      requestPatientsDoctor_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -129,8 +129,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getRequestAmysDoctorBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestAmysDoctor_);
+    if (!getRequestPatientsDoctorBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestPatientsDoctor_);
     }
     unknownFields.writeTo(output);
   }
@@ -141,8 +141,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getRequestAmysDoctorBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestAmysDoctor_);
+    if (!getRequestPatientsDoctorBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestPatientsDoctor_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -160,8 +160,8 @@ private static final long serialVersionUID = 0L;
     smart.medical.intelligentArchivingService.DoctorRequest other = (smart.medical.intelligentArchivingService.DoctorRequest) obj;
 
     boolean result = true;
-    result = result && getRequestAmysDoctor()
-        .equals(other.getRequestAmysDoctor());
+    result = result && getRequestPatientsDoctor()
+        .equals(other.getRequestPatientsDoctor());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -173,8 +173,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + REQUESTAMYSDOCTOR_FIELD_NUMBER;
-    hash = (53 * hash) + getRequestAmysDoctor().hashCode();
+    hash = (37 * hash) + REQUESTPATIENTSDOCTOR_FIELD_NUMBER;
+    hash = (53 * hash) + getRequestPatientsDoctor().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -308,7 +308,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      requestAmysDoctor_ = "";
+      requestPatientsDoctor_ = "";
 
       return this;
     }
@@ -336,7 +336,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public smart.medical.intelligentArchivingService.DoctorRequest buildPartial() {
       smart.medical.intelligentArchivingService.DoctorRequest result = new smart.medical.intelligentArchivingService.DoctorRequest(this);
-      result.requestAmysDoctor_ = requestAmysDoctor_;
+      result.requestPatientsDoctor_ = requestPatientsDoctor_;
       onBuilt();
       return result;
     }
@@ -385,8 +385,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(smart.medical.intelligentArchivingService.DoctorRequest other) {
       if (other == smart.medical.intelligentArchivingService.DoctorRequest.getDefaultInstance()) return this;
-      if (!other.getRequestAmysDoctor().isEmpty()) {
-        requestAmysDoctor_ = other.requestAmysDoctor_;
+      if (!other.getRequestPatientsDoctor().isEmpty()) {
+        requestPatientsDoctor_ = other.requestPatientsDoctor_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -418,71 +418,71 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object requestAmysDoctor_ = "";
+    private java.lang.Object requestPatientsDoctor_ = "";
     /**
-     * <code>string requestAmysDoctor = 1;</code>
+     * <code>string requestPatientsDoctor = 1;</code>
      */
-    public java.lang.String getRequestAmysDoctor() {
-      java.lang.Object ref = requestAmysDoctor_;
+    public java.lang.String getRequestPatientsDoctor() {
+      java.lang.Object ref = requestPatientsDoctor_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        requestAmysDoctor_ = s;
+        requestPatientsDoctor_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string requestAmysDoctor = 1;</code>
+     * <code>string requestPatientsDoctor = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getRequestAmysDoctorBytes() {
-      java.lang.Object ref = requestAmysDoctor_;
+        getRequestPatientsDoctorBytes() {
+      java.lang.Object ref = requestPatientsDoctor_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        requestAmysDoctor_ = b;
+        requestPatientsDoctor_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string requestAmysDoctor = 1;</code>
+     * <code>string requestPatientsDoctor = 1;</code>
      */
-    public Builder setRequestAmysDoctor(
+    public Builder setRequestPatientsDoctor(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      requestAmysDoctor_ = value;
+      requestPatientsDoctor_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string requestAmysDoctor = 1;</code>
+     * <code>string requestPatientsDoctor = 1;</code>
      */
-    public Builder clearRequestAmysDoctor() {
+    public Builder clearRequestPatientsDoctor() {
       
-      requestAmysDoctor_ = getDefaultInstance().getRequestAmysDoctor();
+      requestPatientsDoctor_ = getDefaultInstance().getRequestPatientsDoctor();
       onChanged();
       return this;
     }
     /**
-     * <code>string requestAmysDoctor = 1;</code>
+     * <code>string requestPatientsDoctor = 1;</code>
      */
-    public Builder setRequestAmysDoctorBytes(
+    public Builder setRequestPatientsDoctorBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      requestAmysDoctor_ = value;
+      requestPatientsDoctor_ = value;
       onChanged();
       return this;
     }

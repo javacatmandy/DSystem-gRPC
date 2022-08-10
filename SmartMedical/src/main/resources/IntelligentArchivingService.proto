@@ -29,7 +29,7 @@ package smart;
 }
 
 message DoctorRequest{
-	string requestAmysDoctor = 1;
+	string requestPatientsDoctor = 1;
 
 }
  message DoctorReply{

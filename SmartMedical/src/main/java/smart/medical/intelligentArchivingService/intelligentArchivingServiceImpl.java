@@ -47,15 +47,15 @@ public final class intelligentArchivingServiceImpl {
       "rt\"Q\n\021HealthInfoRequest\022\014\n\004info\030\001 \001(\t\022\014\n" +
       "\004name\030\002 \001(\t\022\016\n\006gender\030\003 \001(\t\022\020\n\010diagnose\030" +
       "\004 \001(\t\"!\n\016ProfileNoReply\022\017\n\007message\030\001 \001(\t" +
-      "\"*\n\rDoctorRequest\022\031\n\021requestAmysDoctor\030\001" +
-      " \001(\t\"\035\n\013DoctorReply\022\016\n\006doctor\030\001 \001(\t2\250\001\n\033" +
-      "IntelligentArchivingService\022D\n\rhealthPro" +
-      "file\022\030.smart.HealthInfoRequest\032\025.smart.P" +
-      "rofileNoReply\"\000(\001\022C\n\025responsibleDoctorIn" +
-      "fo\022\024.smart.DoctorRequest\032\022.smart.DoctorR" +
-      "eply\"\000BN\n)smart.medical.intelligentArchi" +
-      "vingServiceB\037intelligentArchivingService" +
-      "ImplP\001b\006proto3"
+      "\".\n\rDoctorRequest\022\035\n\025requestPatientsDoct" +
+      "or\030\001 \001(\t\"\035\n\013DoctorReply\022\016\n\006doctor\030\001 \001(\t2" +
+      "\250\001\n\033IntelligentArchivingService\022D\n\rhealt" +
+      "hProfile\022\030.smart.HealthInfoRequest\032\025.sma" +
+      "rt.ProfileNoReply\"\000(\001\022C\n\025responsibleDoct" +
+      "orInfo\022\024.smart.DoctorRequest\032\022.smart.Doc" +
+      "torReply\"\000BN\n)smart.medical.intelligentA" +
+      "rchivingServiceB\037intelligentArchivingSer" +
+      "viceImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -86,7 +86,7 @@ public final class intelligentArchivingServiceImpl {
     internal_static_smart_DoctorRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smart_DoctorRequest_descriptor,
-        new java.lang.String[] { "RequestAmysDoctor", });
+        new java.lang.String[] { "RequestPatientsDoctor", });
     internal_static_smart_DoctorReply_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_smart_DoctorReply_fieldAccessorTable = new

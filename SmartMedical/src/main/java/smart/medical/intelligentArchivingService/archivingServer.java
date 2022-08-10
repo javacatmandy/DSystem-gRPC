@@ -103,5 +103,21 @@ public class archivingServer extends IntelligentArchivingServiceImplBase{
 		};//return statement, don't forget ";"
 	}
 	
+	public void responsibleDoctorInfo(DoctorRequest request,
+			StreamObserver<DoctorReply> responseObserver ) {
+		System.out.println("receiving DoctorRequest request: "+request.getRequestPatientsDoctor());
+		String msg = "ok ";
+		/*
+		if(request. < 0.95) {
+			msg = "Alert! The blood oxygen level is too low.";
+		}
+		*/
+		DoctorReply reply = DoctorReply.newBuilder().setDoctor("Sean").build();
+		
+		  responseObserver.onNext(reply);
+
+	      responseObserver.onCompleted();
+	}
+	
 	
 }

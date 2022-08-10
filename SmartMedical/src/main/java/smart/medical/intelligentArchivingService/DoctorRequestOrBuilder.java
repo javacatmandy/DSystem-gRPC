@@ -8,12 +8,12 @@ public interface DoctorRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string requestAmysDoctor = 1;</code>
+   * <code>string requestPatientsDoctor = 1;</code>
    */
-  java.lang.String getRequestAmysDoctor();
+  java.lang.String getRequestPatientsDoctor();
   /**
-   * <code>string requestAmysDoctor = 1;</code>
+   * <code>string requestPatientsDoctor = 1;</code>
    */
   com.google.protobuf.ByteString
-      getRequestAmysDoctorBytes();
+      getRequestPatientsDoctorBytes();
 }
