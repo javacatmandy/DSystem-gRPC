@@ -106,13 +106,15 @@ public class archivingServer extends IntelligentArchivingServiceImplBase{
 	public void responsibleDoctorInfo(DoctorRequest request,
 			StreamObserver<DoctorReply> responseObserver ) {
 		System.out.println("receiving DoctorRequest request: "+request.getRequestPatientsDoctor());
-		String msg = "ok ";
-		/*
-		if(request. < 0.95) {
-			msg = "Alert! The blood oxygen level is too low.";
+		String msg = "The requested patient ";
+		
+		if(request.getRequestPatientsDoctor().equalsIgnoreCase("Amy")) {
+			msg += request.getRequestPatientsDoctor() + "'s responsible doctor is Sean.";
+		}else {
+			msg += "Other patients' responsible doctor is Michael.";
 		}
-		*/
-		DoctorReply reply = DoctorReply.newBuilder().setDoctor("Sean").build();
+		
+		DoctorReply reply = DoctorReply.newBuilder().setDoctor(msg).build();
 		
 		  responseObserver.onNext(reply);
 

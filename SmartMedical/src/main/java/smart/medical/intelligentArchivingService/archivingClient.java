@@ -23,12 +23,15 @@ public class archivingClient {
 		System.out.println("healthProfile method START===");
 		healthProfile();
 		
-		
+		System.out.println("responsibleDoctorInfo method START===");
+		responsibleDoctorInfo();
 		
 		channel.shutdown();
 		
 	}
 	
+	
+
 	public static void healthProfile() {
 		// TODO Auto-generated method stub
 		StreamObserver<ProfileNoReply> responseObserver = new StreamObserver<ProfileNoReply>() {
@@ -76,6 +79,18 @@ public class archivingClient {
 		}catch(InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	
+	private static void responsibleDoctorInfo() {
+		// TODO Auto-generated method stub
+		// First creating a request message. Here, the message contains a patient's name in setPatient
+		DoctorRequest req = DoctorRequest.newBuilder().setRequestPatientsDoctor("Amy").build();
+		//  Calling a remote RPC method using blocking stub defined in main method. req is the message we want to pass.
+		DoctorReply response = blockingStub.responsibleDoctorInfo(req);
+
+		//response contains the output from the server side. Here, we are printing the value contained by response. 
+		System.out.println(response.getDoctor());
 	}
 
 }
