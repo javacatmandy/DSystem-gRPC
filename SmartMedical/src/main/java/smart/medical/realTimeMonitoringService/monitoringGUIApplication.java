@@ -30,8 +30,10 @@ import smart.medical.realTimeMonitoringService.RealTimeMonitoringServiceGrpc.Rea
 import smart.medical.realTimeMonitoringService.RealTimeMonitoringServiceGrpc.RealTimeMonitoringServiceStub;
 
 public class monitoringGUIApplication {
-
+	// Creating stubs for establishing the connection with server.
+	// Blocking stub
 	private static RealTimeMonitoringServiceBlockingStub blockingStub;
+	// Asynch stub
 	private static RealTimeMonitoringServiceStub asyncStub;
 	
 	private ServiceInfo monitoringServiceInfo;
