@@ -16,7 +16,7 @@ package smart;
  rpc responsibleDoctorInfo (DoctorRequest) returns (DoctorReply) {}
 
  }
-
+ // define each variable in rpc method separately
  message HealthInfoRequest{
 	string info = 1;
 	string name = 2;

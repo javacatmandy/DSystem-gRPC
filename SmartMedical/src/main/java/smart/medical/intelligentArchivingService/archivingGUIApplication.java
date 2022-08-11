@@ -83,7 +83,7 @@ public class archivingGUIApplication {
 		try {
 			// create a JmDNS instance
 			JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
-			
+			//Add a service listener
 			jmdns.addServiceListener(service_type, new ServiceListener() {
 
 				

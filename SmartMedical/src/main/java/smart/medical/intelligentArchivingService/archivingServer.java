@@ -1,5 +1,6 @@
+// Name of the package where all the generated files are present.
 package smart.medical.intelligentArchivingService;
-
+//required java packages for the program. 
 import java.io.IOException;
 import java.net.InetAddress;
 import java.util.ArrayList;
@@ -11,25 +12,26 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 import smart.medical.intelligentArchivingService.IntelligentArchivingServiceGrpc.IntelligentArchivingServiceImplBase;
-
+//Extend the ImplBase imported class here. It is an Interface file with required rpc methods
 public class archivingServer extends IntelligentArchivingServiceImplBase{
-
+	//Main method would contain the logic to start the server.
 	public static void main(String[] args) {
-		
+		//The archivingServer is the current file name/ class name. Using an instance of this class different methods could be invoked by the client.
 		archivingServer archivingServer = new archivingServer();
-		
+		// Register a service
 		archivingServer.registerService();
-		
 		//this port number where server will be listen to
 		int port = 50097;
 		try {
 			//create a server
-			Server server = ServerBuilder.forPort(port)//listen to 50097
+			 // Here, we create a server on the port defined in in variable "port" and attach a service "archivingServer" (instance of the class) defined above.
+				Server server = ServerBuilder.forPort(port)//listen to 50097
 					.addService(archivingServer)//this archivingServer service
 					.build()//build
-					.start();//start
+					.start();// Start the server and keep it running for clients to contact.
 			
 			System.out.println("IntelligentArchivingService Server started, listening on "+port );
+			// Server will be running until externally terminated.
 			server.awaitTermination();
 		}catch(IOException e) {
 			e.printStackTrace();
@@ -49,10 +51,14 @@ public class archivingServer extends IntelligentArchivingServiceImplBase{
 			System.out.println(e.getMessage());
 		}
 	}
-	
+	//rpc method Client Streaming
+	//This method will be implemented with Client Streaming, allowing nurses 
+	//to input a set of a patient's basic information and disease diagnosis, 
+	//then get a filing No. from the server.
+
 	public StreamObserver<HealthInfoRequest> healthProfile(
 			StreamObserver<ProfileNoReply> responseObserver){
-		//get the value from the stream of requests of the client
+		
 		return new StreamObserver<HealthInfoRequest> () {
 
 			ArrayList<String> list = new ArrayList<>();
@@ -61,9 +67,7 @@ public class archivingServer extends IntelligentArchivingServiceImplBase{
 			//get one at a time
 			public void onNext(HealthInfoRequest value) {
 				// TODO Auto-generated method stub
-				
-				//System.out.println("receiving patient's info: " +value.getName()+value.getInfo());
-				//patient[0] = {value.getName(),value.getGender(), value.getDiagnose()};
+				// Keep on adding all the input values to arraylist sent by the client in the stream 
 				list.add(value.getInfo());
 				list.add(value.getName());
 				list.add(value.getGender());
@@ -88,13 +92,8 @@ public class archivingServer extends IntelligentArchivingServiceImplBase{
 					currInfo += s + " ";
 				}
 				currInfo += "is filing completed";
-				
-				/*if(!list.isEmpty()) {
-					currInfo = currInfo + "is filing completed";
-				}else {
-					System.out.println("Filing is failed.");
-				}*/
-				
+				// Preparing and sending the reply for the client. Here, response is build and with the value (currInfo) computed by above logic.
+				 // Here, response is sent once the client is done with sending the stream.
 				ProfileNoReply reply = ProfileNoReply.newBuilder().setMessage(currInfo).build();
 				responseObserver.onNext(reply);
 				responseObserver.onCompleted();
@@ -102,9 +101,12 @@ public class archivingServer extends IntelligentArchivingServiceImplBase{
 			
 		};//return statement, don't forget ";"
 	}
-	
+	//rpc method unary
+	//This method will be implemented with Unary, 
+	//allowing a nurse to request who is the patient’s responsible doctor
 	public void responsibleDoctorInfo(DoctorRequest request,
 			StreamObserver<DoctorReply> responseObserver ) {
+		//Retrieve the value from the request of the client
 		System.out.println("receiving DoctorRequest request: "+request.getRequestPatientsDoctor());
 		String msg = "The requested patient ";
 		
@@ -113,9 +115,9 @@ public class archivingServer extends IntelligentArchivingServiceImplBase{
 		}else {
 			msg += "Other patients' responsible doctor is Michael.";
 		}
-		
+		// Preparing the reply for the client. Here, response is build and with the value (msg) computed by above logic.  
 		DoctorReply reply = DoctorReply.newBuilder().setDoctor(msg).build();
-		
+		// Sending the reply for each request. 
 		  responseObserver.onNext(reply);
 
 	      responseObserver.onCompleted();
