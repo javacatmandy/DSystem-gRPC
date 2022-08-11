@@ -16,6 +16,7 @@ service RealTimeMonitoringService {
  rpc lowBloodOxygenAlert (LowBloodOxygenAlertRequest) returns (AlertReply) {}
 
  }
+ // define each variable in rpc method separately
  message LowBloodOxygenAlertRequest{
 	float num = 1;
 }
