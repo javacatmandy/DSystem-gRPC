@@ -16,7 +16,7 @@ service SmartAppointmentService {
  rpc oneClickCancellation (OneClickCancellationRequest) returns (CancellationStatusReply) {}
 
  }
-
+ // define each variable in rpc method separately
  message AppointmentInfoRequest{
 	string Info = 1;
 
